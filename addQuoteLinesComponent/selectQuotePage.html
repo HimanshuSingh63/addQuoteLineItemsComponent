@@ -1,0 +1,28 @@
+<template>
+        <lightning-card title="Select Quote" icon-name="custom:custom14">
+            <div class="slds-m-around_medium">
+                <lightning-record-picker
+                    label="Quote"
+                    placeholder="Search Quotes..."
+                    onchange={handleRecordSelection}
+                    object-api-name="SBQQ__Quote__c"
+                ></lightning-record-picker>
+
+                <div class="slds-grid slds-grid_align-spread slds-m-top_medium">
+                    <div class="slds-col">
+                        <lightning-button 
+                            label="Back"
+                            onclick={switchTemplate}>
+                        </lightning-button>
+                    </div>
+                <div class="slds-col slds-text-align_right">
+                    <lightning-button 
+                        label="Add Product" 
+                        variant="brand" 
+                        onclick={addIntoQuote}>
+                    </lightning-button>
+                </div>
+                </div>
+            </div>
+        </lightning-card>
+</template>

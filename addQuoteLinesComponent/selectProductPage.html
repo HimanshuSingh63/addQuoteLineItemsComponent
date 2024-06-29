@@ -1,0 +1,24 @@
+<template>
+    <lightning-card icon-name="standard:product" title="Select Products">
+        <div style="height: 300px;">
+            <lightning-datatable
+                key-field="Id"
+                data={data}
+                columns={columns}
+                onrowselection={handleRowSelection}
+                show-row-number-column>
+            </lightning-datatable>
+        </div>
+        <div class="slds-m-around_medium slds-col slds-text-align_right">
+            <lightning-button 
+                label="Select Quote" 
+                variant="brand"
+                onclick={switchTemplate} 
+                disabled={isDisabled}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+    <div class="slds-m-top_medium">
+        <p>Selected Product IDs: {formattedSelectedProductIds}</p>
+    </div>   
+</template>
